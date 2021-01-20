@@ -122,7 +122,7 @@ var browser_events_n = 1;
 
 // Instruction vs. instruction+sensory conditions
 var training_cond = jsPsych.data.getURLVariable("training_cond");
-if(training_cond == null) {training_cond = jsPsych.randomization.sampleWithoutReplacement(["cont_instr_G1Y", "cont_instr_G1B"], 1)[0];}
+if(training_cond == null) {training_cond = jsPsych.randomization.sampleWithoutReplacement(["cont_instr_vis_G1Y", "cont_instr_vis_G1B"], 1)[0];}
 //if(training_cond == null) {training_cond = jsPsych.randomization.sampleWithoutReplacement(["cont_instr_G1Y", "cont_instr_G1B", "cont_instr_vis_G1Y", "cont_instr_vis_G1B"], 1)[0];}
 
 // for the AAT, randomization of which group is approached and which is avoided
@@ -748,7 +748,7 @@ var timeline = [];
 
 // fullscreen
 timeline.push(
-  //consent,
+  consent,
   fullscreen_trial,
   hiding_cursor);
 
