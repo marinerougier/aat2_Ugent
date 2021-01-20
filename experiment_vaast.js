@@ -752,7 +752,7 @@ var timeline = [];
 
 // fullscreen
 timeline.push(
-  //consent,
+  consent,
   fullscreen_trial,
   hiding_cursor);
 
