@@ -194,36 +194,36 @@ switch (training_cond) {
   case "cont_instr_G1Y":
     {if (approached_grp == "approach_blue"){
     group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
-    group_to_avoid    = "YELLOW";
+    group_to_avoid    = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
     } else if (approached_grp == "approach_yellow"){
-    group_to_approach = "YELLOW";
+    group_to_approach = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
     group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
   }};
     break;
   case "cont_instr_G1B":
     {if (approached_grp == "approach_blue"){
     group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
-    group_to_avoid    = "YELLOW";
+    group_to_avoid    = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
     } else if (approached_grp == "approach_yellow"){
-    group_to_approach = "YELLOW";
+    group_to_approach = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
     group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
   }};
     break;
   case "cont_instr_vis_G1Y":
     {if (approached_grp == "approach_blue"){
     group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
-    group_to_avoid    = "YELLOW";
+    group_to_avoid    = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
     } else if (approached_grp == "approach_yellow"){
-    group_to_approach = "YELLOW";
+    group_to_approach = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
     group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
     }};
     break;
   case "cont_instr_vis_G1B":
     {if (approached_grp == "approach_blue"){
     group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
-    group_to_avoid    = "YELLOW";
+    group_to_avoid    = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
     } else if (approached_grp == "approach_yellow"){
-    group_to_approach = "YELLOW";
+    group_to_approach = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
     group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
     }};
     break;
@@ -488,7 +488,7 @@ var vaast_instructions_2_G1Y = {
     "<img src = 'stimuli/Face119_B.png'>" +
     "<img src = 'stimuli/Face142_B.png'><br><br>" +
     "                              " +
-    "<center><p class='instructions'> Faces of the <b>YELLOW group:</b></p>" +
+    "<center><p class='instructions'> Faces of the <b><span style='color:#b5a21b'><b>YELLOW</b></span> group:</b></p>" +
     "<img src = 'stimuli/Face10_J.png'>" +
     "<img src = 'stimuli/Face16_J.png'>" +
     "<img src = 'stimuli/Face17_J.png'>" +
@@ -513,7 +513,7 @@ var vaast_instructions_2_G1B = {
   stimulus:
     "<h1 class ='custom-title'>Video Game task</h1>" +
     "<center><p class='instructions'>Two groups of faces will be displayed in this environment. <br></p>" +
-    "<center><p class='instructions'> Faces of the <b>YELLOW group:</b></p>" +
+    "<center><p class='instructions'> Faces of the <b><span style='color:#b5a21b'><b>YELLOW</b></span> group:</b></p>" +
     "<center><img src = 'stimuli/Face19_J.png'>" +
     "<img src = 'stimuli/Face28_J.png'>" +
     "<img src = 'stimuli/Face55_J.png'>" +
