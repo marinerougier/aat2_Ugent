@@ -193,38 +193,38 @@ var group_to_avoid    = undefined;
 switch (training_cond) {
   case "cont_instr_G1Y":
     {if (approached_grp == "approach_blue"){
-    group_to_approach = "BLUE";
+    group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
     group_to_avoid    = "YELLOW";
     } else if (approached_grp == "approach_yellow"){
     group_to_approach = "YELLOW";
-    group_to_avoid    = "BLUE";
+    group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
   }};
     break;
   case "cont_instr_G1B":
     {if (approached_grp == "approach_blue"){
-    group_to_approach = "BLUE";
+    group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
     group_to_avoid    = "YELLOW";
     } else if (approached_grp == "approach_yellow"){
     group_to_approach = "YELLOW";
-    group_to_avoid    = "BLUE";
+    group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
   }};
     break;
   case "cont_instr_vis_G1Y":
     {if (approached_grp == "approach_blue"){
-    group_to_approach = "BLUE";
+    group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
     group_to_avoid    = "YELLOW";
     } else if (approached_grp == "approach_yellow"){
     group_to_approach = "YELLOW";
-    group_to_avoid    = "BLUE";
+    group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
     }};
     break;
   case "cont_instr_vis_G1B":
     {if (approached_grp == "approach_blue"){
-    group_to_approach = "BLUE";
+    group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
     group_to_avoid    = "YELLOW";
     } else if (approached_grp == "approach_yellow"){
     group_to_approach = "YELLOW";
-    group_to_avoid    = "BLUE";
+    group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
     }};
     break;
 }
@@ -595,8 +595,8 @@ var vaast_instructions_5 = {
   type: "html-keyboard-response",
   stimulus:
    "<h1 class ='custom-title'>Video Game task</h1>" +
-    "<p class='instructions'>Before you begin, note that <b>we blurred the faces you previously saw and we removed the background "+
-    "color on the pictures to make the task more challenging.</b><br><br> "+ 
+    "<p class='instructions'>Before you begin, note that <b>we blurred the faces you previously saw and we removed the background color "+
+    "to make the task more challenging.</b><br><br> "+ 
     "However, you should know that: </p>" +
     "<ul class='instructions'>" +
     "<li><strong>Faces following the word 'approach' are always those of the " + group_to_approach + " group</strong></li>" +
