@@ -181,27 +181,8 @@ var faces = [
       "stimuli/Face116_B.png",
 ];
 
-var faces_AA = [
-      "stimuli_AA/Face19.png",
-      "stimuli_AA/Face28.png",
-      "stimuli_AA/Face55.png",
-      "stimuli_AA/Face95.png",
-      "stimuli_AA/Face104.png",
-      "stimuli_AA/Face115.png",
-      "stimuli_AA/Face119.png",
-      "stimuli_AA/Face142.png",
-      "stimuli_AA/Face10.png",
-      "stimuli_AA/Face16.png",
-      "stimuli_AA/Face17.png",
-      "stimuli_AA/Face45.png",
-      "stimuli_AA/Face85.png",
-      "stimuli_AA/Face103.png",
-      "stimuli_AA/Face116.png",
-      "stimuli_AA/Face132.png",
-];
 
 preloadimages.push(faces);
-preloadimages.push(faces_AA);
 
 // VAAST --------------------------------------------------------------------------------
 // VAAST variables ----------------------------------------------------------------------
@@ -274,6 +255,9 @@ switch (training_cond) {
   "stimuli_AA/Face116.png",
   "stimuli_AA/Face132.png"
   ];
+
+preloadimages.push(group1);
+preloadimages.push(group2);
 
   group1 = _.shuffle(group1);
   group2 = _.shuffle(group2);
