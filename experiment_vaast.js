@@ -478,7 +478,7 @@ var vaast_instructions_2_G1Y = {
   stimulus:
     "<h1 class ='custom-title'>Video Game task</h1>" +
     "<center><p class='instructions'>Two groups of faces will be displayed in this environment. <br></p>" +
-    "<center><p class='instructions'> Faces of the <b>BLUE group:</b></p>" +
+    "<center><p class='instructions'> Faces of the <b><span style='color:#2a57ea'><b>BLUE</b></span> group:</b></p>" +
     "<img src = 'stimuli/Face19_B.png'>" +
     "<img src = 'stimuli/Face28_B.png'>" +
     "<img src = 'stimuli/Face55_B.png'>" +
@@ -523,7 +523,7 @@ var vaast_instructions_2_G1B = {
     "<img src = 'stimuli/Face119_J.png'>" +
     "<img src = 'stimuli/Face142_J.png'><br><br>" +
     "                              " +
-    "<center><p class='instructions'> Faces of the <b>BLUE group:</b></p>" +
+    "<center><p class='instructions'> Faces of the <b><span style='color:#2a57ea'><b>BLUE</b></span> group:</b></p>" +
     "<img src = 'stimuli/Face10_B.png'>" +
     "<img src = 'stimuli/Face16_B.png'>" +
     "<img src = 'stimuli/Face17_B.png'>" +
@@ -752,7 +752,7 @@ var timeline = [];
 
 // fullscreen
 timeline.push(
-  consent,
+  //consent,
   fullscreen_trial,
   hiding_cursor);
 
