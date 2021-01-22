@@ -582,7 +582,7 @@ var vaast_instructions_5 = {
     "<ul class='instructions'>" +
     "<li><strong>Faces following the word 'approach' are always those of the " + group_to_approach + " group</strong></li>" +
     "<br>" +
-    "<li><strong>Faces following the word 'avoidance' are always those of the " + group_to_avoid + " group</strong></li>" +
+    "<li><strong>Faces following the word 'avoid' are always those of the " + group_to_avoid + " group</strong></li>" +
     "</ul>" +
     "<p class='instructions'>Please read carefully and make sure that you memorize the instructions above. </p>" +
     "<br>" +
@@ -600,7 +600,7 @@ var vaast_instructions_5_end = {
     "<ul class='instructions'>" +
     "<li><strong>Faces following the word 'approach' were always those of the " + group_to_approach + " group</strong></li>" +
     "<br>" +
-    "<li><strong>Faces following the word 'avoidance' were always those of the " + group_to_avoid + " group</strong></li>" +
+    "<li><strong>Faces following the word 'avoid' were always those of the " + group_to_avoid + " group</strong></li>" +
     "</ul>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <strong>space</strong> to" +
