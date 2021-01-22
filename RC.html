@@ -340,7 +340,7 @@
    var appGrpOptions = ['approach ' + genColor("#2a57ea", "blue") + '-background and avoid ' + genColor("#b5a21b", "yellow") + '-background faces', 'approach ' + genColor("#b5a21b", "yellow") + '-background and avoid ' + genColor("#2a57ea", "blue") + '-background faces', 'I do not remember'];
     var reportedAppGrp = {
         type: 'survey-multi-choice',
-        questions: [{ prompt: "Please indicate the instructions you received in the Video Game task:", options: appGrpOptions, required: true }],
+        questions: [{ prompt: "Please indicate the instructions you received in the Video Game task: (if you do not remember, select the 'I do not know' option)", options: appGrpOptions, required: true }],
         button_label: "continue",
         on_finish: function (data) {
             jsPsych.data.addProperties({
