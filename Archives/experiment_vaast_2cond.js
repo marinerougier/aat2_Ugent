@@ -123,6 +123,7 @@ var browser_events_n = 1;
 // Instruction vs. instruction+sensory conditions
 var training_cond = jsPsych.data.getURLVariable("training_cond");
 if(training_cond == null) {training_cond = jsPsych.randomization.sampleWithoutReplacement(["cont_instr_vis_G1Y", "cont_instr_vis_G1B"], 1)[0];}
+//if(training_cond == null) {training_cond = jsPsych.randomization.sampleWithoutReplacement(["cont_instr_G1Y", "cont_instr_G1B", "cont_instr_vis_G1Y", "cont_instr_vis_G1B"], 1)[0];}
 
 // for the AAT, randomization of which group is approached and which is avoided
 var approached_grp = jsPsych.randomization.sampleWithoutReplacement(["approach_blue", "approach_yellow"], 1)[0];
@@ -190,6 +191,24 @@ var group_to_approach = undefined;
 var group_to_avoid    = undefined;
 
 switch (training_cond) {
+  case "cont_instr_G1Y":
+    {if (approached_grp == "approach_blue"){
+    group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
+    group_to_avoid    = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
+    } else if (approached_grp == "approach_yellow"){
+    group_to_approach = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
+    group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
+  }};
+    break;
+  case "cont_instr_G1B":
+    {if (approached_grp == "approach_blue"){
+    group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
+    group_to_avoid    = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
+    } else if (approached_grp == "approach_yellow"){
+    group_to_approach = "<span style='color:#b5a21b'><b>YELLOW</b></span>";
+    group_to_avoid    = "<span style='color:#2a57ea'><b>BLUE</b></span>";
+  }};
+    break;
   case "cont_instr_vis_G1Y":
     {if (approached_grp == "approach_blue"){
     group_to_approach = "<span style='color:#2a57ea'><b>BLUE</b></span>";
@@ -237,8 +256,8 @@ switch (training_cond) {
   "stimuli_AA/Face132.png"
   ];
 
-  preloadimages.push(group1);
-  preloadimages.push(group2);
+preloadimages.push(group1);
+preloadimages.push(group2);
 
   group1 = _.shuffle(group1);
   group2 = _.shuffle(group2);
@@ -269,7 +288,7 @@ switch (training_cond) {
   {movement: "avoidance",  stimulus: av_list[5]},
   {movement: "avoidance",  stimulus: av_list[6]},
   {movement: "avoidance",  stimulus: av_list[7]},
-  ]
+]
 
 
 // vaast background images --------------------------------------------------------------,
@@ -327,7 +346,7 @@ var next_position_training = function () {
 // init ---------------------------------------------------------------------------------
 var saving_id = function () {
   database
-    .ref("participant_id_AAT2_Ghent/")
+    .ref("participant_id_AAT_Ghent/")
     .push()
     .set({
       id: id,
@@ -341,7 +360,7 @@ var saving_id = function () {
 // vaast trial --------------------------------------------------------------------------
 var saving_vaast_trial = function () {
   database
-    .ref("vaast_trial_AAT2_Ghent/").
+    .ref("vaast_trial_AAT_Ghent/").
     push()
     .set({
       id: id,
@@ -358,7 +377,7 @@ var saving_vaast_trial = function () {
 
 var saving_browser_events = function (completion) {
   database
-    .ref("browser_event_AAT2_Ghent/")
+    .ref("browser_event_AAT_Ghent/")
     .push()
     .set({
       id: id,
@@ -707,10 +726,12 @@ var vaast_training = {
     save_vaast_trial
   ],
   timeline_variables: vaast_stim_training,
-  repetitions: 6, //here, put 12 !!!!!
+  repetitions: 1, //here, put 12 !!!!!
   randomize_order: true,
   data: {
     phase: "training",
+    group: jsPsych.timelineVariable('group'),
+    prime: jsPsych.timelineVariable('prime'),
     stimulus: jsPsych.timelineVariable('stimulus'),
     movement: jsPsych.timelineVariable('movement'),
   }
@@ -739,6 +760,26 @@ timeline.push(
 timeline.push(save_id);
 
 switch(training_cond) {
+  case "cont_instr_G1Y":
+    timeline.push(Gene_Instr,
+                  vaast_instructions_1,
+                  vaast_instructions_2_G1Y,
+                  vaast_instructions_3,
+                  vaast_instructions_4_1,
+                  vaast_instructions_4_2,
+                  vaast_instructions_5,
+                  vaast_instructions_end);
+    break;
+  case "cont_instr_G1B":
+    timeline.push(Gene_Instr,
+                  vaast_instructions_1,
+                  vaast_instructions_2_G1B,
+                  vaast_instructions_3,
+                  vaast_instructions_4_1,
+                  vaast_instructions_4_2,
+                  vaast_instructions_5,
+                  vaast_instructions_end);
+    break;
   case "cont_instr_vis_G1Y":
     timeline.push(Gene_Instr,
                   vaast_instructions_1,
@@ -799,7 +840,7 @@ if (is_compatible) {
     },
     on_finish: function () {
       saving_browser_events(completion = true);
-      window.location.href = "https://marinerougier.github.io/aat2_UGent/RC.html?id=" + id + "&prolificID=" + 
+      window.location.href = "https://marinerougier.github.io/aat_UGent/RC.html?id=" + id + "&prolificID=" + 
       prolificID + "&training_cond=" + training_cond + "&approached_grp=" + approached_grp ;
     }
   });
