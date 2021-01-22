@@ -252,23 +252,23 @@ switch (training_cond) {
   var av_list = _.flattenDeep([Selection_av_gp1, Selection_av_gp2]);
 
   var vaast_stim_training = [
-  {movement: "approach",  stimulus: app_list[0]},
-  {movement: "approach",  stimulus: app_list[1]},
-  {movement: "approach",  stimulus: app_list[2]},
-  {movement: "approach",  stimulus: app_list[3]},
-  {movement: "approach",  stimulus: app_list[4]},
-  {movement: "approach",  stimulus: app_list[5]},
-  {movement: "approach",  stimulus: app_list[6]},
-  {movement: "approach",  stimulus: app_list[7]},
+  {movement: "approach",  prime: "approach",  stimulus: app_list[0]},
+  {movement: "approach",  prime: "approach",  stimulus: app_list[1]},
+  {movement: "approach",  prime: "approach",  stimulus: app_list[2]},
+  {movement: "approach",  prime: "approach",  stimulus: app_list[3]},
+  {movement: "approach",  prime: "approach",  stimulus: app_list[4]},
+  {movement: "approach",  prime: "approach",  stimulus: app_list[5]},
+  {movement: "approach",  prime: "approach",  stimulus: app_list[6]},
+  {movement: "approach",  prime: "approach",  stimulus: app_list[7]},
 
-  {movement: "avoidance",  stimulus: av_list[0]},
-  {movement: "avoidance",  stimulus: av_list[1]},
-  {movement: "avoidance",  stimulus: av_list[2]},
-  {movement: "avoidance",  stimulus: av_list[3]},
-  {movement: "avoidance",  stimulus: av_list[4]},
-  {movement: "avoidance",  stimulus: av_list[5]},
-  {movement: "avoidance",  stimulus: av_list[6]},
-  {movement: "avoidance",  stimulus: av_list[7]},
+  {movement: "avoidance",  prime: "avoid",  stimulus: av_list[0]},
+  {movement: "avoidance",  prime: "avoid",  stimulus: av_list[1]},
+  {movement: "avoidance",  prime: "avoid",  stimulus: av_list[2]},
+  {movement: "avoidance",  prime: "avoid",  stimulus: av_list[3]},
+  {movement: "avoidance",  prime: "avoid",  stimulus: av_list[4]},
+  {movement: "avoidance",  prime: "avoid",  stimulus: av_list[5]},
+  {movement: "avoidance",  prime: "avoid",  stimulus: av_list[6]},
+  {movement: "avoidance",  prime: "avoid",  stimulus: av_list[7]},
   ]
 
 
@@ -647,8 +647,8 @@ var vaast_fixation = {
 
 var vaast_prime = {
   type: 'vaast-text',
-  stimulus: "movement",
-  stimulus: jsPsych.timelineVariable('movement'),
+  stimulus: "prime",
+  stimulus: jsPsych.timelineVariable('prime'),
   position: 2,
   background_images: background,
   font_sizes:  stim_sizes,
@@ -711,6 +711,7 @@ var vaast_training = {
   randomize_order: true,
   data: {
     phase: "training",
+    prime: jsPsych.timelineVariable('prime'),
     stimulus: jsPsych.timelineVariable('stimulus'),
     movement: jsPsych.timelineVariable('movement'),
   }
