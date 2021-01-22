@@ -77,7 +77,7 @@ var preloadimages = [];
 // This section ensure that we don't lose data. Anytime the 
 // client is disconnected, an alert appears onscreen
 var connectedRef = firebase.database().ref(".info/connected");
-var connection = firebase.database().ref("VAAST_AAT_sensory/" + id + "/")
+var connection = firebase.database().ref("VAAST_AAT2_sensory/" + id + "/")
 var dialog = undefined;
 var first_connection = true;
 
