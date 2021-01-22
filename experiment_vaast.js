@@ -800,7 +800,7 @@ if (is_compatible) {
     },
     on_finish: function () {
       saving_browser_events(completion = true);
-      window.location.href = "https://marinerougier.github.io/aat2_UGent/RC.html?id=" + id + "&prolificID=" + 
+      window.location.href = "https://marinerougier.github.io/aat2_Ugent/RC.html?id=" + id + "&prolificID=" + 
       prolificID + "&training_cond=" + training_cond + "&approached_grp=" + approached_grp ;
     }
   });
