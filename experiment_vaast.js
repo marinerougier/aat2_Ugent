@@ -661,6 +661,7 @@ var vaast_blank = {
   type: 'vaast-text',
   stimulus: " ",
   position: 2,
+  stimulus: jsPsych.timelineVariable('prime'),
   background_images: background,
   font_sizes:  stim_sizes,
   //stim_movement: jsPsych.timelineVariable('movement'),
